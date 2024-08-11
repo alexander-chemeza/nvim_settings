@@ -30,3 +30,4 @@ return {
     vim.keymap.set('n', '<F12>', function() dap.step_out() end)
   end,
 }
+
