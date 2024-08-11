@@ -23,6 +23,11 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
+  {
+    "mfussenegger/nvim-dap",
+    lazy = false,
+    import = "plugins.debugging"
+  },
 }, lazy_config)
 
 -- load theme
@@ -32,7 +37,7 @@ dofile(vim.g.base46_cache .. "statusline")
 require "options"
 require "nvchad.autocmds"
 
-require'lspconfig'.pyright.setup{}
+require("lspconfig").pyright.setup {}
 
 vim.schedule(function()
   require "mappings"
